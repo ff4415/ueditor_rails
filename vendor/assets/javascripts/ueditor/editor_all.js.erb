@@ -6741,7 +6741,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         me.uid = uid++;
         EventBase.call(me);
         me.commands = {};
-        me.options = utils.extend(utils.clone(options || {}), UEDITOR_CONFIG,MY_UEDITOR_CONFIG, true);
+        me.options = utils.extend(utils.clone(options || {}), utils.extend(UEDITOR_CONFIG, MY_UEDITOR_CONFIG), true);
         me.shortcutkeys = {};
         me.inputRules = [];
         me.outputRules = [];
